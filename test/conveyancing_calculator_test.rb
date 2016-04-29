@@ -5,7 +5,4 @@ class ConveyancingCalculatorTest < Minitest::Test
     refute_nil ::ConveyancingCalculator::VERSION
   end
 
-  def test_vat
-    assert_equal 0.2, ConveyancingCalculator::VAT
-  end
 end

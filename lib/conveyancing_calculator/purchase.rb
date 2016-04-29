@@ -15,7 +15,7 @@ module ConveyancingCalculator
     end
 
     def vat
-      fee * ConveyancingCalculator::VAT
+      fee * ConveyancingCalculator.configuration.vat_rate
     end
 
     private
@@ -25,7 +25,7 @@ module ConveyancingCalculator
     end
 
     def sorted_purchase_fee_bands
-      ConveyancingCalculator::PURCHASE_FEE_BANDS.sort_by{ |band| band[:lower_bound] }.reverse
+      ConveyancingCalculator.configuration.purchase_fee_bands.sort_by{ |band| band[:lower_bound] }.reverse
     end
   end
 end
