@@ -1,9 +1,10 @@
 module ConveyancingCalculator
   class Purchase
-    attr_reader :purchase_price
+    attr_reader :purchase_price, :symbolised_location
 
-    def initialize(purchase_price)
+    def initialize(purchase_price, symbolised_location)
       @purchase_price = purchase_price.to_d
+      @symbolised_location = symbolised_location
     end
 
     def fee
@@ -25,7 +26,7 @@ module ConveyancingCalculator
     end
 
     def sorted_purchase_fee_bands
-      ConveyancingCalculator.configuration.purchase_fee_bands.sort_by{ |band| band[:lower_bound] }.reverse
+      ConveyancingCalculator.configuration.purchase_fee_bands[symbolised_location].sort_by{ |band| band[:lower_bound] }.reverse
     end
   end
 end
