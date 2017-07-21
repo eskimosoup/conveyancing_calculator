@@ -30,13 +30,12 @@ module ConveyancingCalculator
 
     def land_fees
       [
-        { lower_bound: 0, upper_bound: 20_000, fee: 50.00 },
-        { lower_bound: 20_001, upper_bound: 80_000, fee: 100.00 },
-        { lower_bound: 80_001, upper_bound: 100_000, fee: 150.00 },
-        { lower_bound: 100_001, upper_bound: 150_000, fee: 200.00 },
-        { lower_bound: 150_001, upper_bound: 200_000, fee: 250.00 },
-        { lower_bound: 200_001, upper_bound: 250_000, fee: 300.00 },
-        { lower_bound: 250001, fee: 450.00 }
+        { lower_bound: 0, upper_bound: 80_000, fee: 20.00 },
+        { lower_bound: 80_001, upper_bound: 100_000, fee: 40.00 },
+        { lower_bound: 100_001, upper_bound: 200_000, fee: 95.00 },
+        { lower_bound: 200_001, upper_bound: 500_000, fee: 135.00 },
+        { lower_bound: 500_001, upper_bound: 1_000_000, fee: 270.00 },
+        { lower_bound: 1_000_001, fee: 455.00 }
       ]
     end
   end
