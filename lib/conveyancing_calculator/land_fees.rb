@@ -21,7 +21,7 @@ module ConveyancingCalculator
     private
 
     def land_fee_band
-      sorted_land_fee_bands.detect{ |band| purchase_price > band[:lower_bound] }
+      sorted_land_fee_bands.detect{ |band| purchase_price >= band[:lower_bound] }
     end
 
     def sorted_land_fee_bands
