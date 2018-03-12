@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["jdoyley@gmail.com"]
 
   spec.summary       = %q{ Calculates conveyancing fees }
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/eskimosoup/conveyancing_calculator"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
