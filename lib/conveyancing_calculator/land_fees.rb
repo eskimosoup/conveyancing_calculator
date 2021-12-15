@@ -32,10 +32,10 @@ module ConveyancingCalculator
       [
         { lower_bound: 0, upper_bound: 80_000, fee: 20.00 },
         { lower_bound: 80_001, upper_bound: 100_000, fee: 40.00 },
-        { lower_bound: 100_001, upper_bound: 200_000, fee: 95.00 },
-        { lower_bound: 200_001, upper_bound: 500_000, fee: 135.00 },
-        { lower_bound: 500_001, upper_bound: 1_000_000, fee: 270.00 },
-        { lower_bound: 1_000_001, fee: 455.00 }
+        { lower_bound: 100_001, upper_bound: 200_000, fee: 100.00 },
+        { lower_bound: 200_001, upper_bound: 500_000, fee: 150.00 },
+        { lower_bound: 500_001, upper_bound: 1_000_000, fee: 295.00 },
+        { lower_bound: 1_000_001, fee: 500.00 }
       ]
     end
   end

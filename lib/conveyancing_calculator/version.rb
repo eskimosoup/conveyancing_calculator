@@ -1,3 +1,3 @@
 module ConveyancingCalculator
-  VERSION = "0.170724.1"
+  VERSION = "0.2"
 end
