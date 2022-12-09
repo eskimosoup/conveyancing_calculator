@@ -1,13 +1,14 @@
 module ConveyancingCalculator
   class LandFees
-    attr_reader :purchase_price
+    attr_reader :purchase_price, :new_build
 
-    def initialize(purchase_price)
+    def initialize(purchase_price, new_build: false)
       @purchase_price = purchase_price.to_d
+      @new_build = new_build
     end
 
     def fee
-      @fee ||= land_fee_band[:fee]
+      @fee ||= land_fee
     end
 
     def total
@@ -20,8 +21,16 @@ module ConveyancingCalculator
 
     private
 
+    def land_fee
+      if new_build
+        land_fee_band[:fee] * 2
+      else
+        land_fee_band[:fee]
+      end
+    end
+
     def land_fee_band
-      sorted_land_fee_bands.detect{ |band| purchase_price >= band[:lower_bound] }
+      sorted_land_fee_bands.detect { |band| purchase_price >= band[:lower_bound] }
     end
 
     def sorted_land_fee_bands
