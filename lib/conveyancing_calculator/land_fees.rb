@@ -23,7 +23,7 @@ module ConveyancingCalculator
 
     def land_fee
       if new_build
-        land_fee_band[:fee] * 2
+        (land_fee_band[:fee] * 2) + 30
       else
         land_fee_band[:fee]
       end
