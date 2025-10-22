@@ -31,9 +31,9 @@ module ConveyancingCalculator
 
     def sorted_land_fee_bands
       if new_build
-        land_fees_existing.sort_by{ |band| band[:lower_bound] }.reverse
-      else
         land_fees_new_build.sort_by{ |band| band[:lower_bound] }.reverse
+      else
+        land_fees_existing.sort_by{ |band| band[:lower_bound] }.reverse
       end
     end
 
